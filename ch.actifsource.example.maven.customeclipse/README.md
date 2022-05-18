@@ -9,6 +9,7 @@ In this project we will show how to build a custom actifsoruce eclipse by maven 
 
 ## Set repository credentials
 Add actifsoruce repository credentials to the 'settings.xml' file. ```${user.home}/.m2/settings.xml```
+Use username and password from the actifsource update site (https://updates.actifsource.com/updates-enterprise).
 
 File content:
 ```<settings>
