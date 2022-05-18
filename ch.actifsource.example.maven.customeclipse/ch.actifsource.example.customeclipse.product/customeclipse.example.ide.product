@@ -38,7 +38,6 @@
    <vm>
    </vm>
 
-
    <plugins>
    </plugins>
 
@@ -49,6 +48,7 @@
       <feature id="org.eclipse.jdt"/>
       <feature id="org.eclipse.platform"/>
       <feature id="org.eclipse.sdk"/>
+      <feature id="ch.actifsource.example.customeclipse.feature" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>

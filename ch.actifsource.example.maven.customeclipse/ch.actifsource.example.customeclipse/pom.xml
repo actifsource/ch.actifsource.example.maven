@@ -12,13 +12,13 @@
 		
 		<!-- Set the eclipse target version -->
 		
+		<!--
 		<target-file-name>eclipse-latest</target-file-name>
 		<eclipse-repo.url>http://download.eclipse.org/releases/latest</eclipse-repo.url>
+		-->
 		
-		<!--
 		<target-file-name>eclipse-2020-06</target-file-name>
 		<eclipse-repo.url>http://download.eclipse.org/releases/2020-06</eclipse-repo.url>
-		-->
 		
 		<!--
 		<target-file-name>eclipse-oxygen</target-file-name>
@@ -62,6 +62,8 @@
 	<modules>
 	    <module>../ch.actifsource.example.customeclipse.product</module>
 		<module>../ch.actifsource.example.customeclipse.target</module>
+		<module>../ch.actifsource.example.customeclipse.feature</module>
+		<module>../ch.actifsource.example.customeclipse.model</module>
 	</modules>
 	
 	<build>
