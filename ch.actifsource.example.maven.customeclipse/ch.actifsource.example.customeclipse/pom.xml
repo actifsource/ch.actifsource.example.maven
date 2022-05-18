@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ch.actifsource.example</groupId>
+	<artifactId>ch.actifsource.example.customeclipse</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		
+		<tycho-version>1.7.0</tycho-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<!-- Set the eclipse target version -->
+		
+		<target-file-name>eclipse-latest</target-file-name>
+		<eclipse-repo.url>http://download.eclipse.org/releases/latest</eclipse-repo.url>
+		
+		<!--
+		<target-file-name>eclipse-2020-06</target-file-name>
+		<eclipse-repo.url>http://download.eclipse.org/releases/2020-06</eclipse-repo.url>
+		-->
+		<!--
+		<target-file-name>eclipse-oxygen</target-file-name>
+		<eclipse-repo.url>https://download.eclipse.org/releases/oxygen</eclipse-repo.url>
+		-->
+	</properties>
+	
+	<!-- Add all repositories -->
+	<repositories>
+        <repository>
+			<id>${target-file-name}</id>
+			<layout>p2</layout>
+			<url>${eclipse-repo.url}</url>
+		</repository>
+        <repository>
+            <id>actifsource-enterprise</id>
+            <layout>p2</layout>
+            <url>https://updates.actifsource.com/updates-enterprise</url>
+        </repository>
+    </repositories>
+    
+    <!-- Add local repository if the profiel is enabled 'mvn clean install -Plocal-repo' -->
+    <profiles>
+		<profile>
+			<id>local-repo</id>
+            <activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+    
+		    <repositories>
+		        <repository>
+		            <id>local-repo</id>
+		            <layout>p2</layout>
+		            <url>file:///${basedir}/../local-repo</url>
+		        </repository>	
+		    </repositories>
+        </profile>
+	</profiles>
+    
+    <!-- Add modules -->
+	<modules>
+	    <module>../ch.actifsource.example.customeclipse.product</module>
+		<module>../ch.actifsource.example.customeclipse.target</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<!-- Specify all environments when building the IDE -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					
+					<dependency-resolution>
+						<extraRequirements>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.eclipse.equinox.ds</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+					</extraRequirements>
+                    </dependency-resolution>
+					
+					<target>
+						<artifact>
+							<groupId>ch.actifsource.example</groupId>
+							<artifactId>ch.actifsource.example.customeclipse.target</artifactId>
+							<version>${project.version}</version>
+							<classifier>${target-file-name}</classifier>
+						</artifact>
+					</target>
+					
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+					
+				</configuration>
+			</plugin>
+		
+		    <!-- Enable tycho -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
