@@ -1,12 +1,17 @@
 # Build custom actifsource eclipse
 In this project we will show how to build a custem actifsoruce eclipse by maven tycho.
 
+|Project|Description|
+|---|---|
+|ch.actifsource.example.customeclipse|Contains the parent pom.xml|
+|ch.actifsource.example.customeclipse.product||
+|ch.actifsource.example.customeclipse.target||
+
 ## Actifsoruce repository credentials
 Add actifsoruce repository credentials to the 'settings.xml' file. (${user.home}/.m2/settings.xml)
 
 Content:
-
-<settings>
+`<settings>
     <servers>
         <server>
             <id>actifsource-enterprise</id>
@@ -14,7 +19,14 @@ Content:
             <password></password>
         </server>
     </servers>
-</settings>
+</settings>`
+
+
+
+
+
+
+
 
 
 
