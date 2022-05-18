@@ -1,17 +1,17 @@
 # Build custom actifsource eclipse
 In this project we will show how to build a custem actifsoruce eclipse by maven tycho.
 
-|Project|Description|
+|:Project|:Description|
 |---|---|
 |ch.actifsource.example.customeclipse|Contains the parent pom.xml|
-|ch.actifsource.example.customeclipse.product||
-|ch.actifsource.example.customeclipse.target||
+|ch.actifsource.example.customeclipse.product|Defines the product to build|
+|ch.actifsource.example.customeclipse.target|Defines all possible targets|
 
-## Actifsoruce repository credentials
+## Set repository credentials
 Add actifsoruce repository credentials to the 'settings.xml' file. (${user.home}/.m2/settings.xml)
 
 Content:
-`<settings>
+```<settings>
     <servers>
         <server>
             <id>actifsource-enterprise</id>
@@ -19,20 +19,22 @@ Content:
             <password></password>
         </server>
     </servers>
-</settings>`
+</settings>
+```
 
+## Run maven inside Eclipse
+Create a new run configuration
+![Eclipse run configuration](images/runinsideeclipse.png)
 
+## Run maven standalone
+Download the maven project (https://maven.apache.org/download.cgi)
+and run maven: ``` mvn clean install ``` 
 
+## Build success
+![Eclipse run configuration](images/consolelog.png)
 
-
-
-
-
-
-
-![Model CIP Built-In](images/runinsideeclipse.png)
-
-
+The products are now in the folder 'ch.actifsource.example.customeclipse.product\target\products'
+![Eclipse run configuration](images/products.png)
 
 ## Requirements
 Actifsource Workbench Enterprise Edition
