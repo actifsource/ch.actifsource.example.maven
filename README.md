@@ -1,2 +1,8 @@
-# ch.actifsource.example.maven
-Using maven tycho to build 
+# Maven Tycho examples
+Build artifacts by maven tycho
+
+|Repository|Description|
+|---|---|
+|ch.actifsource.example.maven.customeclipse/|Build custom actifsource eclipse|
+
+
