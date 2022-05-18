@@ -7,7 +7,6 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		
 		<tycho-version>1.7.0</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
@@ -20,6 +19,7 @@
 		<target-file-name>eclipse-2020-06</target-file-name>
 		<eclipse-repo.url>http://download.eclipse.org/releases/2020-06</eclipse-repo.url>
 		-->
+		
 		<!--
 		<target-file-name>eclipse-oxygen</target-file-name>
 		<eclipse-repo.url>https://download.eclipse.org/releases/oxygen</eclipse-repo.url>
