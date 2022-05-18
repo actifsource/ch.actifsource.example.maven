@@ -3,7 +3,7 @@ In this project we will show how to build a custom actifsoruce eclipse by maven 
 
 |Project|Description|
 |---|---|
-|ch.actifsource.example.customeclipse|Contains the parent pom.xml|
+|ch.actifsource.example.customeclipse|Contains the parent pom.xml. Define the target eclipse version inside this pom.xml|
 |ch.actifsource.example.customeclipse.product|Defines the product to build|
 |ch.actifsource.example.customeclipse.target|Defines all possible targets|
 
