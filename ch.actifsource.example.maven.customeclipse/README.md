@@ -29,7 +29,7 @@ Create a new run configuration
 
 ## Run maven standalone
 Download the maven project (https://maven.apache.org/download.cgi)
-and run maven: ``` mvn clean install ``` or ```use run-mvn-local.bat```.
+and run maven: ``` mvn clean install ``` or ```run-mvn-local.bat```.
 
 ## Build success
 ![Eclipse run configuration](images/consolelog.png)
