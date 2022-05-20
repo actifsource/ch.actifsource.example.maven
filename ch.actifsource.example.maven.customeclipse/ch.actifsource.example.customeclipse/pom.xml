@@ -68,6 +68,7 @@
 	
 	<build>
 		<plugins>
+		
 			<!-- Specify all environments when building the IDE -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Actifsource Eclipse SDK" uid="actifsoruce.ide" id="org.eclipse.sdk.ide" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Actifsource Eclipse SDK" uid="actifsoruce.ide" id="org.eclipse.sdk.ide" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="eclipse_lg.gif"/>
@@ -38,6 +38,7 @@
    <vm>
    </vm>
 
+
    <plugins>
    </plugins>
 
@@ -48,7 +49,7 @@
       <feature id="org.eclipse.jdt"/>
       <feature id="org.eclipse.platform"/>
       <feature id="org.eclipse.sdk"/>
-      <feature id="ch.actifsource.example.customeclipse.feature" version="1.0.0.qualifier"/>
+      <feature id="ch.actifsource.example.customeclipse.feature"/>
    </features>
 
    <configurations>
@@ -64,7 +65,7 @@
    </configurations>
 
    <preferencesInfo>
-      <targetfile overwrite="true"/>
+      <targetfile overwrite="false"/>
    </preferencesInfo>
 
    <cssInfo>
