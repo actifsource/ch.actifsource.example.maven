@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: ch.actifsource.example.unittest.model.test
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: ch.actifsource.core;bundle-version="11.2.0",
+ ch.actifsource.core.testutil;bundle-version="11.2.0",
+ ch.actifsource.testutil;bundle-version="11.2.0",
+ ch.actifsource.ui.junit;bundle-version="11.2.0",
+ ch.actifsource.example.unittest.model;bundle-version="1.0.0"

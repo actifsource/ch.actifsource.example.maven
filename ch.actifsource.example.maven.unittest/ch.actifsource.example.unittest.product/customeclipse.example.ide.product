@@ -14,12 +14,6 @@
    </configIni>
 
    <launcherArgs>
-      <programArgsLin>-vm
-jre/bin
-      </programArgsLin>
-      <programArgsWin>-vm
-jre/bin
-      </programArgsWin>
       <vmArgs>-XX:MaxPermSize=256m -Xms512m -Xmx10g
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
@@ -44,6 +38,7 @@ jre/bin
    <vm>
    </vm>
 
+
    <plugins>
    </plugins>
 
@@ -55,7 +50,6 @@ jre/bin
       <feature id="org.eclipse.platform"/>
       <feature id="org.eclipse.sdk"/>
       <feature id="ch.actifsource.example.customeclipse.feature"/>
-      <feature id="ch.actifsource.example.customeclipse.jre.feature"/>
    </features>
 
    <configurations>

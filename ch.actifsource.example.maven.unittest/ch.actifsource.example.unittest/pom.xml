@@ -2,7 +2,7 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.actifsource.example</groupId>
-	<artifactId>ch.actifsource.example.customeclipse</artifactId>
+	<artifactId>ch.actifsource.example.unittest</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -60,11 +60,10 @@
     
     <!-- Add modules -->
 	<modules>
-	    <module>../ch.actifsource.example.customeclipse.product</module>
-	    <module>../ch.actifsource.example.customeclipse.jre.feature</module>
-		<module>../ch.actifsource.example.customeclipse.target</module>
-		<module>../ch.actifsource.example.customeclipse.feature</module>
-		<module>../ch.actifsource.example.customeclipse.model</module>
+	    <module>../ch.actifsource.example.unittest.product</module>
+		<module>../ch.actifsource.example.unittest.target</module>
+		<module>../ch.actifsource.example.unittest.feature</module>
+		<module>../ch.actifsource.example.unittest.model</module>
 	</modules>
 	
 	<build>
@@ -90,7 +89,7 @@
 					<target>
 						<artifact>
 							<groupId>ch.actifsource.example</groupId>
-							<artifactId>ch.actifsource.example.customeclipse.target</artifactId>
+							<artifactId>ch.actifsource.example.unittest.target</artifactId>
 							<version>${project.version}</version>
 							<classifier>${target-file-name}</classifier>
 						</artifact>
