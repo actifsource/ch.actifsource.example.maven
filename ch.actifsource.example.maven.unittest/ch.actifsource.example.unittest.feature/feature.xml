@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="ch.actifsource.example.customeclipse.feature"
+      id="ch.actifsource.example.unittest.feature"
       label="Custom Actifsource Model Feature"
       version="1.0.0.qualifier">
 
