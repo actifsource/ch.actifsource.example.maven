@@ -3,9 +3,12 @@ In this project we will show how to build a custom actifsoruce eclipse by maven 
 
 |Project|Description|
 |---|---|
-|ch.actifsource.example.customeclipse|Contains the parent pom.xml. Define the target eclipse version inside this pom.xml|
-|ch.actifsource.example.customeclipse.product|Defines the product to build|
-|ch.actifsource.example.customeclipse.target|Defines all possible targets|
+|ch.actifsource.example.unittest|Contains the parent pom.xml. Define the target eclipse version inside this pom.xml|
+|ch.actifsource.example.unittest.feature|Defines the feature from the project to test|
+|ch.actifsource.example.unittest.model|Defines the project to test|
+|ch.actifsource.example.unittest.model.test|Defines all possible targets|
+|ch.actifsource.example.unittest.product|Defines the product to test|
+|ch.actifsource.example.unittest.target|Defines all possible targets|
 
 ## Set repository credentials
 Add actifsoruce repository credentials to the 'settings.xml' file. ```${user.home}/.m2/settings.xml```
@@ -33,9 +36,6 @@ and run maven: ``` mvn clean install ``` or ```run-mvn-local.bat```.
 
 ## Build success
 ![Eclipse run configuration](images/consolelog.png)
-
-The products are now in the folder ```ch.actifsource.example.customeclipse.product\target\products```.
-![Eclipse run configuration](images/products.png)
 
 ## Requirements
 Actifsource Workbench Enterprise Edition

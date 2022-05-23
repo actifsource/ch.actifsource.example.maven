@@ -1,11 +1,14 @@
-# Build custom actifsource eclipse
-In this project we will show how to build a custom actifsoruce eclipse by maven tycho.
+# Build custom eclipse
+In this project we will show how to build a actifsource eclipse with integrated customized plugin by maven tycho.. 
 
 |Project|Description|
 |---|---|
 |ch.actifsource.example.customeclipse|Contains the parent pom.xml. Define the target eclipse version inside this pom.xml|
 |ch.actifsource.example.customeclipse.product|Defines the product to build|
 |ch.actifsource.example.customeclipse.target|Defines all possible targets|
+|ch.actifsource.example.customeclipse.jre.feature|Contains the jre to add to your eclipse application|
+|ch.actifsource.example.customeclipse.feature|Defines the feature from the project which will be integrated as a plugin in eclipse|
+|ch.actifsource.example.customeclipse.model|Contains the project which will be integrated as a plugin in eclipse|
 
 ## Set repository credentials
 Add actifsoruce repository credentials to the 'settings.xml' file. ```${user.home}/.m2/settings.xml```

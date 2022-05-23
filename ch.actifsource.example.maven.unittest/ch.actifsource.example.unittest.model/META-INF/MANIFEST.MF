@@ -3,7 +3,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Custom Actifsource Model
 Bundle-SymbolicName: ch.actifsource.example.unittest.model;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: ch.actifsource.core;bundle-version="11.2.0"
+Require-Bundle: ch.actifsource.core;bundle-version="11.2.0",
+ ch.actifsource.ui.diagram.classes;bundle-version="11.2.0",
+ ch.actifsource.environment;bundle-version="11.2.0",
+ ch.actifsource.ui.diagram;bundle-version="11.2.0"
 Export-Package: ch.actifsource.example.customeclipse.model;uses:="ch.actifsource.example.customeclipse.model.javamodel,ch.actifsource.core.dynamic,ch.actifsource.core",
  ch.actifsource.example.customeclipse.model.javamodel;uses:="ch.actifsource.core.dynamic,ch.actifsource.core,ch.actifsource.core.javamodel"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -13,38 +13,48 @@
 	<packaging>eclipse-test-plugin</packaging>
 
     <build>
-     <plugins>
+       <plugins>
      
-     
-     <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-            <execution>
-                <id>copy</id>
-                <phase>pre-integration-test</phase>
-                <goals>
-                    <goal>copy-dependencies</goal>
-                </goals>
-                <configuration>
-                    <outputDirectory>${project.build.directory}/work/plugins</outputDirectory>
-                </configuration>
-            </execution>
-        </executions>
-      </plugin>
-     
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-surefire-plugin</artifactId>
-        <version>${tycho-version}</version>
-         <configuration>
-          <useUIHarness>false</useUIHarness>
-          <includes>
-            <include>**/${project.artifactId}/AllTests.java</include>
-          </includes>
-         </configuration>
-       </plugin>
-     </plugins>
+	     <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-dependency-plugin</artifactId>
+	        <executions>
+	            <execution>
+	                <id>copy</id>
+	                <phase>pre-integration-test</phase>
+	                <goals>
+	                    <goal>copy-dependencies</goal>
+	                </goals>
+	                <configuration>
+	                    <outputDirectory>${project.build.directory}/work/plugins</outputDirectory>
+	                    <excludeArtifactIds>ch.actifsource.libs_external,ch.actifsource.testutil</excludeArtifactIds>
+	                </configuration>
+	            </execution>
+	        </executions>
+	      </plugin>
+	          
+	      <plugin>
+	        <groupId>org.eclipse.tycho</groupId>
+	        <artifactId>tycho-surefire-plugin</artifactId>
+	        <version>${tycho-version}</version>
+	         <configuration>
+	          <useUIHarness>false</useUIHarness>
+	          <failIfNoTests>false</failIfNoTests>
+	          <explodedBundles>ch.actifsource.libs_external,ch.actifsource.testutil</explodedBundles>
+	          <systemProperties>
+	             <ch.actifsource.ui.junit.projectDirURL>file:/./../</ch.actifsource.ui.junit.projectDirURL>
+	             <ch.actifsource.ui.junit.workspaceProjectFiles>./../ch.actifsource.example.unittest.model.test</ch.actifsource.ui.junit.workspaceProjectFiles>
+	             <ch.actifsource.ui.junit.workspaceRootFile>file:/./../</ch.actifsource.ui.junit.workspaceRootFile>
+	             <ch.actifsource.ui.junit.bundleDirURL>file:${project.build.directory}/work/plugins</ch.actifsource.ui.junit.bundleDirURL>
+	             <actifsource.verbose>true</actifsource.verbose>
+	          </systemProperties>
+	          <includes>
+	            <include>**/${project.artifactId}/AllTests.java</include>
+	          </includes>
+	         </configuration>
+	       </plugin>
+	       
+        </plugins>
     </build>
 	
 </project>

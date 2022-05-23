@@ -3,15 +3,18 @@
   <version format="5.6.0" />
   <resourcepaths>
     <path>asrc</path>
-    <builtin>codesnippet</builtin>
-    <builtin>core</builtin>
-    <builtin>diagram</builtin>
-    <builtin>modelsnippet</builtin>
   </resourcepaths>
   <templatepaths />
-  <targetpaths />
   <ignoreWhitespaceAtLineEnd>false</ignoreWhitespaceAtLineEnd>
   <executeSaveActions>false</executeSaveActions>
   <generateJavaModel>true</generateJavaModel>
+  <targetpaths>
+    <targetpath>
+      <path>src-gen</path>
+      <build>
+        <buildConfig>18ec87f1-f9d8-11de-b92c-3ddcb4864021</buildConfig>
+      </build>
+    </targetpath>
+  </targetpaths>
 </projectSettings>
 
