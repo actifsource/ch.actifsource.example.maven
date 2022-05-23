@@ -64,10 +64,19 @@
 		<module>../ch.actifsource.example.unittest.target</module>
 		<module>../ch.actifsource.example.unittest.feature</module>
 		<module>../ch.actifsource.example.unittest.model</module>
+		<module>../ch.actifsource.example.unittest.model.test</module>
 	</modules>
 	
 	<build>
 		<plugins>
+		
+		    <!-- Enable tycho -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
 		
 			<!-- Specify all environments when building the IDE -->
 			<plugin>
@@ -116,13 +125,9 @@
 				</configuration>
 			</plugin>
 		
-		    <!-- Enable tycho -->
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<extensions>true</extensions>
-			</plugin>
+		    <!-- TODO -->
+		
+		    
 
 		</plugins>
 	</build>

@@ -1,19 +1,20 @@
 package ch.actifsource.example.unittest.model.test.model;
 
-import java.io.IOException;
+//import java.io.IOException;
 import org.junit.Test;
-import ch.actifsource.core.PackagedResource;
-import ch.actifsource.core.job.Select;
-import ch.actifsource.core.job.Update;
-import ch.actifsource.core.patch.IStatementPosition;
-import ch.actifsource.core.selector.typesystem.impl.TypeSystem;
-import ch.actifsource.ui.junit.SingleScopeTestCase;
+//import ch.actifsource.core.PackagedResource;
+//import ch.actifsource.core.job.Select;
+//import ch.actifsource.core.job.Update;
+//import ch.actifsource.core.patch.IStatementPosition;
+//import ch.actifsource.core.selector.typesystem.impl.TypeSystem;
+//import ch.actifsource.ui.junit.SingleScopeTestCase;
+import junit.framework.TestCase;
 
-public class ChildTest extends SingleScopeTestCase {
+public class ChildTest extends TestCase /*SingleScopeTestCase*/ {
 
-	public ChildTest() throws IOException {
-		super("ch.actifsource.example.unittest.model.test");
-	}
+//	public ChildTest() throws IOException {
+//		super("ch.actifsource.example.unittest.model.test");
+//	}
 
 	@Override
 	protected void setUp() throws Exception {
@@ -26,6 +27,10 @@ public class ChildTest extends SingleScopeTestCase {
 	
 	@Test
 	public void test_childSize() {
+		//fail("fail Grischa test 1");
+		assertTrue(true);
+		
+		
 //		assertEquals(5, Select.objectsForRelation(fSession, GenericPackage.Root_child, SpecificPackage.RootInstance).size());
 	}
 	
