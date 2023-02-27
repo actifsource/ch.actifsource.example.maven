@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<relativePath>../ch.actifsource.example.generator/pom.xml</relativePath>
+		<groupId>ch.actifsource.example</groupId>
+		<artifactId>ch.actifsource.example.generator</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>ch.actifsource.example.generator.feature</artifactId>
+	<packaging>eclipse-feature</packaging>
+
+</project>

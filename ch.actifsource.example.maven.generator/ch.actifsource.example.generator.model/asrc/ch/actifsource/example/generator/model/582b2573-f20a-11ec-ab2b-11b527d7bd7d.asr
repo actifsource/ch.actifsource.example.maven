@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource format="5.6.0" guid="582b2573-f20a-11ec-ab2b-11b527d7bd7d">
+  <owns predicate="0d70687c-d69e-11ec-9669-c7063ed32e69">
+    <resource statement-guid="5947b90a-f20a-11ec-ab2b-11b527d7bd7d" type="resource" guid="59476ae7-f20a-11ec-ab2b-11b527d7bd7d" />
+  </owns>
+  <predicate guid="3169f49a-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="582b2575-f20a-11ec-ab2b-11b527d7bd7d" type="resource" guid="073519ee-d69e-11ec-9669-c7063ed32e69" />
+  </predicate>
+  <predicate guid="33fc8660-f91f-11d9-bb45-5fabdff7c7da">
+    <object statement-guid="582b9aa6-f20a-11ec-ab2b-11b527d7bd7d" type="literal">InstanceA</object>
+  </predicate>
+  <predicate guid="0d70687c-d69e-11ec-9669-c7063ed32e69">
+    <object statement-guid="5947b90a-f20a-11ec-ab2b-11b527d7bd7d">
+      <resource guid="59476ae7-f20a-11ec-ab2b-11b527d7bd7d">
+        <predicate guid="3169f49a-f91f-11d9-bb45-5fabdff7c7da">
+          <object statement-guid="594791f9-f20a-11ec-ab2b-11b527d7bd7d" type="resource" guid="0aafe8dd-d69e-11ec-9669-c7063ed32e69" />
+        </predicate>
+        <predicate guid="33fc8660-f91f-11d9-bb45-5fabdff7c7da">
+          <object statement-guid="59efb8db-f20a-11ec-ab2b-11b527d7bd7d" type="literal">SubInstanceB</object>
+        </predicate>
+      </resource>
+    </object>
+  </predicate>
+</resource>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ch.actifsource.example.generator.model</name>
+	<comment></comment>
+	<projects>
+		<project>ch.actifsource.example.generator.metamodel</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>ch.actifsource.environment.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>ch.actifsource.environment.nature</nature>
+	</natures>
+</projectDescription>

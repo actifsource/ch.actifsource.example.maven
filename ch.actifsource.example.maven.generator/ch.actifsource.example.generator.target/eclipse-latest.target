@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="eclipse-latest" sequenceNumber="16">
+<?pde version="3.8"?><target name="eclipse-latest" sequenceNumber="15">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.23.600.v20221116-1440"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.23.300.v20220223-1131"/>
+<unit id="org.eclipse.platform.sdk" version="4.23.0.I20220308-0310"/>
 <repository location="http://download.eclipse.org/releases/latest"/>
 </location>
 </locations>

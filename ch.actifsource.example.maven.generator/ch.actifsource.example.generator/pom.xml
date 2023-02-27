@@ -2,7 +2,7 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.actifsource.example</groupId>
-	<artifactId>ch.actifsource.example.actifsourceeclipse</artifactId>
+	<artifactId>ch.actifsource.example.generator</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -17,18 +17,8 @@
 		<eclipse-repo.url>http://download.eclipse.org/releases/latest</eclipse-repo.url>
 		-->
 		
-		<target-file-name>eclipse-2022-06</target-file-name>
-		<eclipse-repo.url>http://download.eclipse.org/releases/2022-06</eclipse-repo.url>
-				
-		<!--
-		<target-file-name>eclipse-2021-12</target-file-name>
-		<eclipse-repo.url>http://download.eclipse.org/releases/2021-12</eclipse-repo.url>
-		-->
-
-		<!--
 		<target-file-name>eclipse-2020-06</target-file-name>
 		<eclipse-repo.url>http://download.eclipse.org/releases/2020-06</eclipse-repo.url>
-		-->
 		
 		<!--
 		<target-file-name>eclipse-oxygen</target-file-name>
@@ -70,12 +60,24 @@
     
     <!-- Add modules -->
 	<modules>
-	    <module>../ch.actifsource.example.actifsourceeclipse.product</module>
-		<module>../ch.actifsource.example.actifsourceeclipse.target</module>
+	    <module>../ch.actifsource.example.generator.product</module>
+		<module>../ch.actifsource.example.generator.target</module>
+		<module>../ch.actifsource.example.generator.feature</module>
+		<module>../ch.actifsource.example.generator.metamodel</module>
+		<module>../ch.actifsource.example.generator.model</module>
 	</modules>
 	
 	<build>
 		<plugins>
+		
+		    <!-- Enable tycho -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+		
 			<!-- Specify all environments when building the IDE -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
@@ -96,7 +98,7 @@
 					<target>
 						<artifact>
 							<groupId>ch.actifsource.example</groupId>
-							<artifactId>ch.actifsource.example.actifsourceeclipse.target</artifactId>
+							<artifactId>ch.actifsource.example.generator.target</artifactId>
 							<version>${project.version}</version>
 							<classifier>${target-file-name}</classifier>
 						</artifact>
@@ -123,13 +125,9 @@
 				</configuration>
 			</plugin>
 		
-		    <!-- Enable tycho -->
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<extensions>true</extensions>
-			</plugin>
+		    <!-- TODO -->
+		
+		    
 
 		</plugins>
 	</build>
