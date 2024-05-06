@@ -1,4 +1,4 @@
-package ch.actifsource.example.customeclipse.model;
+package ch.actifsource.example.unittest.model;
 
 import ch.actifsource.util.Assert;
 import java.util.List;
@@ -28,7 +28,7 @@ public class TestFunctions {
   public static interface ISubClassFunctionsImpl extends IDynamicResourceExtensionJavaImpl {
     
     @IDynamicResourceExtension.MethodId("c2ba8644-d6a3-11ec-9669-c7063ed32e69")
-    public java.lang.String getSubClassName(final ch.actifsource.example.customeclipse.model.javamodel.ISubClass subClass);
+    public java.lang.String getSubClassName(final ch.actifsource.example.unittest.model.javamodel.ISubClass subClass);
 
   }
   
@@ -39,9 +39,9 @@ public class TestFunctions {
     private SubClassFunctionsImpl() {}
 
     @Override
-    public java.lang.String getSubClassName(final ch.actifsource.example.customeclipse.model.javamodel.ISubClass subClass) {
+    public java.lang.String getSubClassName(final ch.actifsource.example.unittest.model.javamodel.ISubClass subClass) {
       /* Begin Protected Region [[c2ba8644-d6a3-11ec-9669-c7063ed32e69]] */
-      return "Prefix_"+subClass.selectName();  
+    	return "TestName_"+subClass.toString();
       /* End Protected Region   [[c2ba8644-d6a3-11ec-9669-c7063ed32e69]] */
     }
 
@@ -51,7 +51,7 @@ public class TestFunctions {
 
     private SubClassFunctions() {}
 
-    public static java.lang.String getSubClassName(final ch.actifsource.example.customeclipse.model.javamodel.ISubClass subClass) {
+    public static java.lang.String getSubClassName(final ch.actifsource.example.unittest.model.javamodel.ISubClass subClass) {
       return DynamicResourceUtil.invoke(ISubClassFunctionsImpl.class, SubClassFunctionsImpl.INSTANCE, subClass).getSubClassName(subClass);
     }
 
@@ -59,4 +59,4 @@ public class TestFunctions {
 
 }
 
-/* Actifsource ID=[5349246f-db37-11de-82b8-17be2e034a3b,bcfd687c-d6a3-11ec-9669-c7063ed32e69,qPkbHIo7hVHynxFRwGXB6rzcAeQ=] */
+/* Actifsource ID=[5349246f-db37-11de-82b8-17be2e034a3b,bcfd687c-d6a3-11ec-9669-c7063ed32e69,fIs89jnOixN5YxedcSVGYABEloM=] */

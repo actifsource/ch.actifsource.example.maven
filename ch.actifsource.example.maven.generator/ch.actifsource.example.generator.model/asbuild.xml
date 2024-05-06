@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project default="build" basedir=".">
+
+  <!-- Define the projects classes output folder. Relative to the project path. -->
+  <!-- Example: 'bin' or 'target/classes' -->
+  <property name="ch.actifsource.antdetect.projectClassesOutput" value="bin" />
+
+  <!-- BEGIN - LATEST ANT-PLUGIN-DIR FOR TASK-DETECTION -->
+  <last id="ch.actifsource.ant.latest.id">
+   <sort>
+     <date xmlns="antlib:org.apache.tools.ant.types.resources.comparators"/>
+    <dirset id="ch.actifsource.ant.set" dir="${ch.actifsource.antdetect.bundleFolders}" includes="ch.actifsource.ant_*"/>  
+   </sort>
+  </last>
+  <property name="ch.actifsource.ant.latest" refId="ch.actifsource.ant.latest.id"/>
+  <echo message="Launch detector in ${ch.actifsource.ant.latest}"/>
+  <!-- END LATEST ANT-PLUGIN-DIR FOR TASK-DETECTION -->
+  
+  <!-- Load the detect.xml file from the latest ch.actifsource.ant bundle. -->
+  <import file="${ch.actifsource.ant.latest}/actifsource.tasks.detect.xml" />
+  
+  <target name="code">    
+    <generate2 threadcapacity="1" verbose="true" resourcescope="project:ch.actifsource.example.generator.model" buildConfig="ch.actifsource.example.generator.metamodel.BuildConfigMaven" outputroot="D:\Eclipse\WORKBENCH\WORKBENCH_GITHUB\ch.actifsource.example.maven\ch.actifsource.example.maven.generator\ch.actifsource.example.generator.model\code">
+      <sysproperty key="ch.actifsource.platform.workspaceRootFolder" value="${ch.actifsource.platform.workspaceRootFolder}"/>
+      <sysproperty key="ch.actifsource.platform.bundleFolders" value="${ch.actifsource.antdetect.bundleFolders}"/>
+      <sysproperty key="ch.actifsource.platform.bundleFiles" value="${ch.actifsource.antdetect.bundleFiles}"/>
+      <sysproperty key="ch.actifsource.platform.projectFolders" value="${ch.actifsource.antdetect.projectFolders}"/>
+      <sysproperty key="ch.actifsource.platform.projectFiles" value="${ch.actifsource.antdetect.projectFiles}"/>
+      <sysproperty key="ch.actifsource.platform.projectClassesOutput" value="${ch.actifsource.antdetect.projectClassesOutput}"/>
+    </generate2>
+  </target>
+  
+  <target name="build" depends="code"/>
+</project>

@@ -3,9 +3,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Custom Actifsource Metamodel
 Bundle-SymbolicName: ch.actifsource.example.generator.metamodel;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: ch.actifsource.core;bundle-version="11.2.0",
- ch.actifsource.environment;bundle-version="11.2.0",
- ch.actifsource.ant;bundle-version="11.2.0"
+Require-Bundle: ch.actifsource.core,
+ ch.actifsource.environment,
+ ch.actifsource.ant
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: ch.actifsource.example.generator.metamodel,
  ch.actifsource.example.generator.metamodel.javamodel

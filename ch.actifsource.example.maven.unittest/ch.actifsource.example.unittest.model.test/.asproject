@@ -12,7 +12,9 @@
     <targetpath>
       <path>src-gen</path>
       <build>
-        <buildConfig>18ec87f1-f9d8-11de-b92c-3ddcb4864021</buildConfig>
+        <buildConfig>99b69f49-efcd-11de-acda-67724273ac0c</buildConfig>
+        <package>ch.actifsource.example.unittest.model.**</package>
+        <package>ch.actifsource.example.unittest.model.test.**</package>
       </build>
     </targetpath>
   </targetpaths>

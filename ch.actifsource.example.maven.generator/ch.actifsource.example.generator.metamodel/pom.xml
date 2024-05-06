@@ -12,45 +12,33 @@
 	<artifactId>ch.actifsource.example.generator.metamodel</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
-    <build>
+	<build>
        <plugins>
-       
-      
-        
-         <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-dependency-plugin</artifactId>
+             
+	      <plugin>
+	        <artifactId>maven-antrun-plugin</artifactId>
+	        <version>3.1.0</version>
 	        <executions>
-	            <execution>
-	                <id>copy</id>
-	                <phase>package</phase>
-	                <goals>
-	                    <goal>copy-dependencies</goal>
-	                </goals>
-	                <configuration>
-	                    <outputDirectory>${project.build.directory}/work/plugins</outputDirectory>
-	                    <excludeArtifactIds>ch.actifsource.libs_external,ch.actifsource.testutil</excludeArtifactIds>
-	                    
-	                </configuration>
-	            </execution>
-	            
-	            <execution>
-		              <phase>package</phase>
-		              <goals>
-		                  <goal>build-classpath</goal>
-		              </goals>
-		              <configuration>
-		                <outputProperty>maven.compile.classpath</outputProperty>
-		                <outputFile>${project.build.directory}/work/classpath</outputFile>
-		                <pathSeparator>;</pathSeparator>
-		              </configuration>
-		        </execution>
-	            
-          
+	          
+	          <execution>
+	            <id>generate-resources</id>
+	            <phase>generate-resources</phase>
+	            <configuration>
+	              <target>
+	               <echo message="Export class path to: '${project.build.directory}/maven_compile_classpath.txt'"/>
+            		<pathconvert property="classpath" refid="maven.compile.classpath"/>
+            		<echo file="${project.build.directory}/maven_compile_classpath.txt" message="${classpath}"/>
+	              </target>
+	            </configuration>
+	            <goals>
+	              <goal>run</goal>
+	            </goals>
+	          </execution>
+	          
 	        </executions>
-	      </plugin>
-
-	  </plugins>
+		   </plugin>
+	       
+        </plugins>
     </build>
-
+    
 </project>

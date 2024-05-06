@@ -1,4 +1,4 @@
-package ch.actifsource.example.customeclipse.model.javamodel;
+package ch.actifsource.example.unittest.model.javamodel;
 
 import ch.actifsource.util.collection.IMultiMapOrdered;
 import ch.actifsource.core.dynamic.*;
@@ -42,12 +42,12 @@ public class TestModelClass extends DynamicResource implements ITestModelClass {
   // relations
   
   @Override
-  public java.util.List<? extends ch.actifsource.example.customeclipse.model.javamodel.ISubClass> selectSubClass() {
-    return _getList(ch.actifsource.example.customeclipse.model.javamodel.ISubClass.class, ch.actifsource.example.customeclipse.model.ModelPackage.TestModelClass_subClass);
+  public java.util.List<? extends ch.actifsource.example.unittest.model.javamodel.ISubClass> selectSubClass() {
+    return _getList(ch.actifsource.example.unittest.model.javamodel.ISubClass.class, ch.actifsource.example.unittest.model.ModelPackage.TestModelClass_subClass);
   }
 
-  public TestModelClass setSubClass(java.util.List<? extends ch.actifsource.example.customeclipse.model.javamodel.ISubClass> subClass) {
-    _setList(ch.actifsource.example.customeclipse.model.ModelPackage.TestModelClass_subClass, subClass);
+  public TestModelClass setSubClass(java.util.List<? extends ch.actifsource.example.unittest.model.javamodel.ISubClass> subClass) {
+    _setList(ch.actifsource.example.unittest.model.ModelPackage.TestModelClass_subClass, subClass);
     return this;
   }
     
@@ -67,15 +67,15 @@ public class TestModelClass extends DynamicResource implements ITestModelClass {
     // attributes
     _acceptSingleAttribute(java.lang.String.class, ch.actifsource.core.CorePackage.NamedResource_name, visitor);
     // relations
-    _acceptList(ch.actifsource.example.customeclipse.model.javamodel.ISubClass.class, ch.actifsource.example.customeclipse.model.ModelPackage.TestModelClass_subClass, visitor);
+    _acceptList(ch.actifsource.example.unittest.model.javamodel.ISubClass.class, ch.actifsource.example.unittest.model.ModelPackage.TestModelClass_subClass, visitor);
     _acceptSingle(ch.actifsource.core.javamodel.IClass.class, ch.actifsource.core.CorePackage.Resource_typeOf, visitor);
   }
 
   // toMeRelations
   
-  public static ch.actifsource.example.customeclipse.model.javamodel.ITestModelClass selectToMeSubClass(ch.actifsource.example.customeclipse.model.javamodel.ISubClass object) {
-    return _getToMeSingle(object.getRepository(), ch.actifsource.example.customeclipse.model.javamodel.ITestModelClass.class, ch.actifsource.example.customeclipse.model.ModelPackage.TestModelClass_subClass, object.getResource());
+  public static ch.actifsource.example.unittest.model.javamodel.ITestModelClass selectToMeSubClass(ch.actifsource.example.unittest.model.javamodel.ISubClass object) {
+    return _getToMeSingle(object.getRepository(), ch.actifsource.example.unittest.model.javamodel.ITestModelClass.class, ch.actifsource.example.unittest.model.ModelPackage.TestModelClass_subClass, object.getResource());
   }
   
 }
-/* Actifsource ID=[4d723cb5-db37-11de-82b8-17be2e034a3b,073519ee-d69e-11ec-9669-c7063ed32e69,Wwn45d0d0UngtgV+9fFQGPketNg=] */
+/* Actifsource ID=[4d723cb5-db37-11de-82b8-17be2e034a3b,073519ee-d69e-11ec-9669-c7063ed32e69,JuRoy0Hc1RjQPqdT7gLLrljHkao=] */

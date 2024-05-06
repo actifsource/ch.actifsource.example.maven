@@ -14,40 +14,48 @@
 
     <build>
        <plugins>
-     
-	     <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-dependency-plugin</artifactId>
-	        <executions>
-	            <execution>
-	                <id>copy</id>
-	                <phase>pre-integration-test</phase>
-	                <goals>
-	                    <goal>copy-dependencies</goal>
-	                </goals>
-	                <configuration>
-	                    <outputDirectory>${project.build.directory}/work/plugins</outputDirectory>
-	                    <excludeArtifactIds>ch.actifsource.libs_external,ch.actifsource.testutil</excludeArtifactIds>
-	                </configuration>
-	            </execution>
-	        </executions>
-	      </plugin>
-	          
+             
 	      <plugin>
+	        <artifactId>maven-antrun-plugin</artifactId>
+	        <version>3.1.0</version>
+	        <executions>
+	          
+	          <execution>
+	            <id>generate-resources</id>
+	            <phase>generate-resources</phase>
+	            <configuration>
+	              <target>
+	               <echo message="Export class path to: '${project.build.directory}/maven_compile_classpath.txt'"/>
+            		<pathconvert property="classpath" refid="maven.compile.classpath"/>
+            		<echo file="${project.build.directory}/maven_compile_classpath.txt" message="${classpath}"/>
+	              </target>
+	            </configuration>
+	            <goals>
+	              <goal>run</goal>
+	            </goals>
+	          </execution>
+	          
+	        </executions>
+		   </plugin>
+	      
+	       <plugin>
 	        <groupId>org.eclipse.tycho</groupId>
 	        <artifactId>tycho-surefire-plugin</artifactId>
 	        <version>${tycho-version}</version>
 	         <configuration>
 	          <useUIHarness>false</useUIHarness>
 	          <failIfNoTests>false</failIfNoTests>
-	          <explodedBundles>ch.actifsource.libs_external,ch.actifsource.testutil</explodedBundles>
 	          <systemProperties>
-	             <ch.actifsource.ui.junit.projectDirURL>file:/./../</ch.actifsource.ui.junit.projectDirURL>
-	             <ch.actifsource.ui.junit.workspaceProjectFiles>./../ch.actifsource.example.unittest.model.test</ch.actifsource.ui.junit.workspaceProjectFiles>
-	             <ch.actifsource.ui.junit.workspaceRootFile>file:/./../</ch.actifsource.ui.junit.workspaceRootFile>
-	             <ch.actifsource.ui.junit.bundleDirURL>file:${project.build.directory}/work/plugins</ch.actifsource.ui.junit.bundleDirURL>
-	             <actifsource.verbose>true</actifsource.verbose>
+	             <ch.actifsource.platform.workspaceRootFolder>${project.build.directory}/../../</ch.actifsource.platform.workspaceRootFolder>
+	             <ch.actifsource.antdetect.bundleFolders>C:\Users\ruti\.m222\repo\p2\osgi\bundle</ch.actifsource.antdetect.bundleFolders>
+	             <ch.actifsource.platform.bundleFiles>${project.build.directory}\maven_compile_classpath.txt</ch.actifsource.platform.bundleFiles>
+	             <ch.actifsource.platform.projectFiles>${project.build.directory}\maven_compile_classpath.txt</ch.actifsource.platform.projectFiles>
+	             <ch.actifsource.platform.projectClassesOutput>target/classes</ch.actifsource.platform.projectClassesOutput>
 	          </systemProperties>
+	          <explodedBundles>
+				<bundle>ch.actifsource.ant</bundle>
+				<bundle>ch.actifsource.codesnippet</bundle>
+			  </explodedBundles>
 	          <includes>
 	            <include>**/${project.artifactId}/AllTests.java</include>
 	          </includes>

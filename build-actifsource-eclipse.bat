@@ -1,8 +1,8 @@
 @echo off
 echo Downloading Maven...
-set MAVEN_VERSION=3.8.4
-set MAVEN_BASE_URL=https://dlcdn.apache.org/maven/maven-3/3.9.0/binaries/
-set MAVEN_ARCHIVE_NAME=apache-maven-3.9.0-bin.zip
+set MAVEN_VERSION=3.9.2
+set MAVEN_BASE_URL=https://dlcdn.apache.org/maven/maven-3/3.9.2/binaries/
+set MAVEN_ARCHIVE_NAME=apache-maven-3.9.2-bin.zip
 set MAVEN_DOWNLOAD_URL=%MAVEN_BASE_URL%/%MAVEN_ARCHIVE_NAME%
 powershell -Command "(New-Object Net.WebClient).DownloadFile('%MAVEN_DOWNLOAD_URL%', '%MAVEN_ARCHIVE_NAME%')"
 echo Extracting Maven...

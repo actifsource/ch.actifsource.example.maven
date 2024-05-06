@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Actifsource Eclipse SDK" uid="actifsoruce.ide" id="org.eclipse.sdk.ide" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Actifsource Eclipse SDK" uid="actifsoruce.ide" id="org.eclipse.sdk.ide" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="eclipse_lg.gif"/>
@@ -48,20 +48,19 @@ jre/bin
    </plugins>
 
    <features>
-      <feature id="ch.actifsource.p2"/>
-      <feature id="ch.actifsource"/>
-      <feature id="ch.actifsource.enterprise"/>
       <feature id="org.eclipse.jdt"/>
       <feature id="org.eclipse.platform"/>
       <feature id="org.eclipse.sdk"/>
+      <feature id="ch.actifsource.p2"/>
+      <feature id="ch.actifsource"/>
+      <feature id="ch.actifsource.enterprise"/>
       <feature id="ch.actifsource.example.customeclipse.feature"/>
-      <feature id="ch.actifsource.example.customeclipse.jre.feature"/>
    </features>
 
    <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />

@@ -5,9 +5,18 @@ Bundle-SymbolicName: ch.actifsource.example.unittest.model.test
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: ch.actifsource.core;bundle-version="11.2.0",
  ch.actifsource.core.testutil;bundle-version="11.2.0",
+ ch.actifsource.example.unittest.model;bundle-version="1.0.0",
  ch.actifsource.testutil;bundle-version="11.2.0",
  ch.actifsource.ui.junit;bundle-version="11.2.0",
- ch.actifsource.example.unittest.model;bundle-version="1.0.0"
+ ch.actifsource.ant;bundle-version="11.3.1",
+ ch.actifsource.codesnippet.metamodel;bundle-version="11.3.1",
+ org.eclipse.swt;bundle-version="3.106.3",
+ ch.actifsource.ui.diagram;bundle-version="11.3.1",
+ ch.actifsource.environment;bundle-version="11.3.1",
+ ch.actifsource.codesnippet;bundle-version="11.3.1",
+ ch.actifsource.ui.widget;bundle-version="11.3.1",
+ org.eclipse.gef;bundle-version="3.11.0",
+ ch.actifsource.diagram;bundle-version="11.3.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: ch.actifsource.example.unittest.model.test,
  ch.actifsource.example.unittest.model.test.model

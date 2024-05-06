@@ -1,4 +1,4 @@
-package ch.actifsource.example.customeclipse.model.javamodel;
+package ch.actifsource.example.unittest.model.javamodel;
 
 import ch.actifsource.util.collection.IMultiMapOrdered;
 import ch.actifsource.core.dynamic.*;
@@ -61,4 +61,4 @@ public class SubClass extends DynamicResource implements ISubClass {
   }
 
 }
-/* Actifsource ID=[4d723cb5-db37-11de-82b8-17be2e034a3b,0aafe8dd-d69e-11ec-9669-c7063ed32e69,spnMhKdQTOxfhQEEBszLOGNzVDE=] */
+/* Actifsource ID=[4d723cb5-db37-11de-82b8-17be2e034a3b,0aafe8dd-d69e-11ec-9669-c7063ed32e69,r0P77kr0ryEo1vfYcb1Oj4hsDqo=] */

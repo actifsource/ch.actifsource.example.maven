@@ -12,40 +12,41 @@
 	<artifactId>ch.actifsource.example.generator.model</artifactId>
 	<packaging>pom</packaging>
 
-<dependencies>
-		        <dependency>
-		            <groupId>ch.actifsource.example</groupId>
-		            <artifactId>ch.actifsource.example.generator.metamodel</artifactId>
-		            <version>1.0.0</version>
-		        </dependency>
-		    </dependencies>
-		    
-<build>
-    
+	<build>
        <plugins>
-    
-	        <plugin>
-            <groupId>ch.actifsource.example</groupId>
-            <artifactId>example-maven-plugin</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <executions>
-                <execution>
-                    <id>grischa touch tttt</id>
-	                <phase>package</phase>
-                    <goals>
-                        <goal>touch</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                
-            
-    
-            </configuration>
-        </plugin>
-	     
-      
+             
+		   <plugin>
+		        <artifactId>maven-antrun-plugin</artifactId>
+		        <version>3.1.0</version>
+		        <executions>
+		          
+		         	<execution>
+			            <id>generate-test-sources</id>
+			            <phase>generate-test-sources</phase>
+			            <configuration>
+			              <target>
+			                <echo message="Phase: generate-test-sources Directory: '${project.build.directory}'"/>
+			                
+			                <property name="ch.actifsource.platform.workspaceRootFolder" value="${project.build.directory}\..\..\" />
+			                <property name="ch.actifsource.antdetect.bundleFolders" value="D:\Eclipse\eclipse-rcp-2022-12-R-win32-x86_64Experim\eclipse\plugins" />
+			                <property name="ch.actifsource.antdetect.bundleFiles" value="" />
+			                <property name="ch.actifsource.antdetect.projectFolders" value="D:/Eclipse/WORKBENCH/WORKBENCH_GITHUB/ch.actifsource.example.maven" />
+			                <property name="ch.actifsource.antdetect.projectFiles" value="" />
+			               
+		            		<ant antfile="${basedir}/asbuild.xml">
+		            			<target name="build"/>
+		        			</ant>
+			              </target>
+			            </configuration>
+			            <goals>
+			              <goal>run</goal>
+			            </goals>
+			     	</execution>
+		          
+		        </executions>
+		   </plugin>
+		   
         </plugins>
     </build>
-
+    
 </project>
