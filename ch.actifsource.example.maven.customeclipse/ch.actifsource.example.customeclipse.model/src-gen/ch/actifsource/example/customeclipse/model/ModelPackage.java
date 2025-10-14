@@ -28,4 +28,4 @@ public class ModelPackage {
   }
   
 }
-/* Actifsource ID=[c1a07b92-fc09-11e0-b756-0dc1d96a76cb,ch.actifsource.example.customeclipse.model,G4w6/y56mLHdU7Mn6Mc1qgRtz7c=] */
+/* Actifsource ID=[c1a07b92-fc09-11e0-b756-0dc1d96a76cb,ch.actifsource.example.customeclipse.model,xzZK+WulSYjwy49WNrMrPVMEWIE=] */
